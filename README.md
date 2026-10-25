@@ -85,11 +85,6 @@ _Add your main findings here, for example:_
 
 Contributions, issues, and suggestions are welcome. Feel free to open an issue or submit a pull request.
 
-## 👤 Author
-
-**Mohamed Atef Abdelwhab**
-GitHub: [@MohamedAtefAbdelwhab](https://github.com/MohamedAtefAbdelwhab)
-
 ---
 
 ⭐ If you found this project useful, consider giving it a star!
