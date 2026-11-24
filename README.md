@@ -1,90 +1,45 @@
-# 🍽️ Zomatoo — Zomato Data Analysis & Rating Prediction
+# Zomato Restaurant Rating Prediction
 
-An end-to-end data analysis and machine learning project on Zomato restaurant data. It covers the full workflow: data cleaning, exploratory data analysis (EDA), feature engineering, encoding, and predictive modeling to analyze restaurant ratings and uncover actionable insights.
+An end-to-end machine learning project that investigates restaurant ratings using Zomato data. The notebook covers data cleaning, exploratory analysis, feature engineering, model comparison, and evaluation.
 
----
+## Project questions
 
-## 📌 Project Overview
+- How do ratings vary across cuisines, locations, and price ranges?
+- Which features help classify restaurant ratings?
+- How can repeated restaurants affect evaluation, and how should data leakage be reduced?
 
-Restaurant ratings strongly influence customer choices and business success. This project explores what drives those ratings on Zomato and builds a model to predict them, going from raw data to insights and predictions in a single notebook.
+## Method
 
-## 🎯 Objectives
+1. Clean and validate the tabular data.
+2. Explore rating, cuisine, location, and pricing patterns with visualizations.
+3. Prepare features for classification and compare seven models.
+4. Evaluate models with accuracy, precision, recall, F1-score, and ROC-AUC.
+5. Address repeated restaurant entries by splitting at restaurant level to reduce leakage between train and test data.
 
-- Clean and prepare raw Zomato restaurant data for analysis
-- Explore patterns and relationships in the data through EDA and visualization
-- Engineer meaningful features that improve model performance
-- Encode categorical variables for machine learning
-- Train and evaluate predictive models for restaurant ratings
-- Extract actionable insights for restaurant owners and customers
+## Tools
 
-## 🔄 Workflow
+Python · Pandas · NumPy · Matplotlib · Seaborn · Scikit-learn · Jupyter
 
-1. **Data Cleaning** — handle missing values, duplicates, inconsistent formats, and incorrect data types
-2. **Exploratory Data Analysis (EDA)** — analyze distributions, correlations, and trends with visualizations
-3. **Feature Engineering** — create and transform features that capture useful signals
-4. **Encoding** — convert categorical features into numerical form
-5. **Predictive Modeling** — train, evaluate, and compare models to predict restaurant ratings
-6. **Insights** — summarize the key factors that influence ratings
-
-## 🛠️ Tech Stack
-
-- **Language:** Python
-- **Environment:** Jupyter Notebook
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-
-## 📁 Repository Structure
-
-```
-Zomatoo/
-├── Zomatoo .ipynb    # Full analysis and modeling notebook
-└── README.md
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8+
-- Jupyter Notebook or JupyterLab
-
-### Installation
+## Run the notebook
 
 ```bash
-# Clone the repository
 git clone https://github.com/MohamedAtefAbdelwhab/Zomatoo.git
 cd Zomatoo
-
-# Install dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-```
-
-### Run the notebook
-
-```bash
+pip install -r requirements.txt
 jupyter notebook "Zomatoo .ipynb"
 ```
 
-> Note: make sure the Zomato dataset file is available in the path the notebook expects.
+The dataset is not included in this repository. Update the data path in the notebook to point to your local copy before running it.
 
-## 📊 Key Insights
+## Repository contents
 
-_Add your main findings here, for example:_
+- [`Zomatoo .ipynb`](./Zomatoo%20.ipynb) — analysis, feature preparation, model comparison, and evaluation
+- [`requirements.txt`](./requirements.txt) — Python dependencies
 
-- Which factors correlate most with higher ratings
-- How price range, cuisine, or location affect ratings
-- Best-performing model and its evaluation metrics
+## Evaluation note
 
-## 🔮 Future Improvements
+Repeated entries for the same restaurant can make a random row split overly optimistic. This project uses restaurant-level splitting so that records for a restaurant do not appear in both training and test sets.
 
-- Hyperparameter tuning and cross-validation
-- Trying additional models (e.g., ensemble methods)
-- Building a simple web app to serve predictions
-- Adding more visualizations and dashboards
+## Author
 
-## 🤝 Contributing
-
-Contributions, issues, and suggestions are welcome. Feel free to open an issue or submit a pull request.
-
----
-
-⭐ If you found this project useful, consider giving it a star!
+[Mohamed Atef](https://github.com/MohamedAtefAbdelwhab)
